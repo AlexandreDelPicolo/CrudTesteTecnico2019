@@ -1,10 +1,11 @@
-﻿using CrudTesteTecnico2019.Domain.Usuario.Command;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
+using CrudTesteTecnico2019.Domain.Usuario.Command;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
 
-namespace CrudTesteTecnico2019.Web2.Controller
+namespace CrudTesteTecnico2019.Web.Controller
 {
     [Route("v1/usuario")]
     [ApiController]
@@ -16,7 +17,7 @@ namespace CrudTesteTecnico2019.Web2.Controller
             _mediator = mediator;
         }
 
-        [HttpPost, AllowAnonymous]
+        [HttpPost("adicionar"), AllowAnonymous]
         public async Task Adicionar([FromBody] UsuarioCommand command)
         {
             await _mediator.Send(command);
