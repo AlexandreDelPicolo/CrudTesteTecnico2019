@@ -1,9 +1,0 @@
-C:\Users\Alexandre Del Picolo\Desktop\Estudos\new-back\CrudTesteTecnico2019.Infrastructure\bin\Debug\netcoreapp3.0\CrudTesteTecnico2019.Infrastructure.deps.json
-C:\Users\Alexandre Del Picolo\Desktop\Estudos\new-back\CrudTesteTecnico2019.Infrastructure\bin\Debug\netcoreapp3.0\CrudTesteTecnico2019.Infrastructure.dll
-C:\Users\Alexandre Del Picolo\Desktop\Estudos\new-back\CrudTesteTecnico2019.Infrastructure\bin\Debug\netcoreapp3.0\CrudTesteTecnico2019.Infrastructure.pdb
-C:\Users\Alexandre Del Picolo\Desktop\Estudos\new-back\CrudTesteTecnico2019.Infrastructure\obj\Debug\netcoreapp3.0\CrudTesteTecnico2019.Infrastructure.csprojAssemblyReference.cache
-C:\Users\Alexandre Del Picolo\Desktop\Estudos\new-back\CrudTesteTecnico2019.Infrastructure\obj\Debug\netcoreapp3.0\CrudTesteTecnico2019.Infrastructure.csproj.CoreCompileInputs.cache
-C:\Users\Alexandre Del Picolo\Desktop\Estudos\new-back\CrudTesteTecnico2019.Infrastructure\obj\Debug\netcoreapp3.0\CrudTesteTecnico2019.Infrastructure.AssemblyInfoInputs.cache
-C:\Users\Alexandre Del Picolo\Desktop\Estudos\new-back\CrudTesteTecnico2019.Infrastructure\obj\Debug\netcoreapp3.0\CrudTesteTecnico2019.Infrastructure.AssemblyInfo.cs
-C:\Users\Alexandre Del Picolo\Desktop\Estudos\new-back\CrudTesteTecnico2019.Infrastructure\obj\Debug\netcoreapp3.0\CrudTesteTecnico2019.Infrastructure.dll
-C:\Users\Alexandre Del Picolo\Desktop\Estudos\new-back\CrudTesteTecnico2019.Infrastructure\obj\Debug\netcoreapp3.0\CrudTesteTecnico2019.Infrastructure.pdb
