@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
-namespace CrudTesteTecnico2019.Web.Controller
+namespace CrudTesteTecnico2019.Web2.Controller
 {
     [Route("v1/usuario")]
     [ApiController]

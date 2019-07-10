@@ -1,10 +1,13 @@
-using CrudTesteTecnico2019.Database.Database;
+﻿using CrudTesteTecnico2019.Database.Database;
 using CrudTesteTecnico2019.Database.Database.Usuario;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace CrudTesteTecnico2019.Web
+namespace CrudTesteTecnico2019.Web2
 {
     public class Startup
     {
@@ -19,26 +22,20 @@ namespace CrudTesteTecnico2019.Web
             services.BuildServiceProvider().GetRequiredService<Context>().Database.Migrate();
 
             services.AddScoped<IUsuarioRepository, UsuarioRepository>();
-
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        //public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
-        //{
-        //    if (env.IsDevelopment())
-        //    {
-        //        app.UseDeveloperExceptionPage();
-        //    }
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        {
+            if (env.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+            }
 
-        //    app.UseRouting();
-
-        //    app.UseEndpoints(endpoints =>
-        //    {
-        //        endpoints.MapGet("/", async context =>
-        //        {
-        //            await context.Response.WriteAsync("Hello World!");
-        //        });
-        //    });
-        //}
+            app.Run(async (context) =>
+            {
+                await context.Response.WriteAsync("Hello World!");
+            });
+        }
     }
 }

@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrudTesteTecnico2019.Databa
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrudTesteTecnico2019.Application", "CrudTesteTecnico2019.Application\CrudTesteTecnico2019.Application.csproj", "{FBE6BC83-B778-4111-9A96-553D9A1D962F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrudTesteTecnico2019.Web", "CrudTesteTecnico2019.Web2\CrudTesteTecnico2019.Web.csproj", "{8378BA4E-D064-49F1-86F3-CC36FB361B88}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrudTesteTecnico2019.Web", "CrudTesteTecnico2019.Web\CrudTesteTecnico2019.Web.csproj", "{8378BA4E-D064-49F1-86F3-CC36FB361B88}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

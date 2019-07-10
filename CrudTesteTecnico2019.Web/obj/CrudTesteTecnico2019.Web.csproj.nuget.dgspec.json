@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Alexandre Del Picolo\\Desktop\\Estudos\\new-back\\CrudTesteTecnico2019.Web\\CrudTesteTecnico2019.Web.csproj": {}
+    "C:\\Users\\Alexandre Del Picolo\\Desktop\\Estudos\\new-back\\CrudTesteTecnico2019.Web2\\CrudTesteTecnico2019.Web.csproj": {}
   },
   "projects": {
     "C:\\Users\\Alexandre Del Picolo\\Desktop\\Estudos\\new-back\\CrudTesteTecnico2019.Database\\CrudTesteTecnico2019.Database.csproj": {
@@ -176,14 +176,14 @@
         }
       }
     },
-    "C:\\Users\\Alexandre Del Picolo\\Desktop\\Estudos\\new-back\\CrudTesteTecnico2019.Web\\CrudTesteTecnico2019.Web.csproj": {
+    "C:\\Users\\Alexandre Del Picolo\\Desktop\\Estudos\\new-back\\CrudTesteTecnico2019.Web2\\CrudTesteTecnico2019.Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Alexandre Del Picolo\\Desktop\\Estudos\\new-back\\CrudTesteTecnico2019.Web\\CrudTesteTecnico2019.Web.csproj",
+        "projectUniqueName": "C:\\Users\\Alexandre Del Picolo\\Desktop\\Estudos\\new-back\\CrudTesteTecnico2019.Web2\\CrudTesteTecnico2019.Web.csproj",
         "projectName": "CrudTesteTecnico2019.Web",
-        "projectPath": "C:\\Users\\Alexandre Del Picolo\\Desktop\\Estudos\\new-back\\CrudTesteTecnico2019.Web\\CrudTesteTecnico2019.Web.csproj",
+        "projectPath": "C:\\Users\\Alexandre Del Picolo\\Desktop\\Estudos\\new-back\\CrudTesteTecnico2019.Web2\\CrudTesteTecnico2019.Web.csproj",
         "packagesPath": "C:\\Users\\Alexandre Del Picolo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Alexandre Del Picolo\\Desktop\\Estudos\\new-back\\CrudTesteTecnico2019.Web\\obj\\",
+        "outputPath": "C:\\Users\\Alexandre Del Picolo\\Desktop\\Estudos\\new-back\\CrudTesteTecnico2019.Web2\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -217,15 +217,14 @@
       "frameworks": {
         "netcoreapp2.2": {
           "dependencies": {
-            "MediatR": {
-              "target": "Package",
-              "version": "[7.0.0, )"
-            },
             "Microsoft.AspNetCore.App": {
+              "suppressParent": "All",
               "target": "Package",
-              "version": "[2.2.6, )"
+              "version": "[2.2.0, )",
+              "autoReferenced": true
             },
             "Microsoft.AspNetCore.Razor.Design": {
+              "suppressParent": "All",
               "target": "Package",
               "version": "[2.2.0, )"
             },
