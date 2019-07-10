@@ -1,0 +1,16 @@
+C:\Users\Alexandre Del Picolo\Desktop\Estudos\new-back\CrudTesteTecnico2019.Database\bin\Debug\netcoreapp3.0\CrudTesteTecnico2019.Database.deps.json
+C:\Users\Alexandre Del Picolo\Desktop\Estudos\new-back\CrudTesteTecnico2019.Database\bin\Debug\netcoreapp3.0\CrudTesteTecnico2019.Database.runtimeconfig.json
+C:\Users\Alexandre Del Picolo\Desktop\Estudos\new-back\CrudTesteTecnico2019.Database\bin\Debug\netcoreapp3.0\CrudTesteTecnico2019.Database.runtimeconfig.dev.json
+C:\Users\Alexandre Del Picolo\Desktop\Estudos\new-back\CrudTesteTecnico2019.Database\bin\Debug\netcoreapp3.0\CrudTesteTecnico2019.Database.dll
+C:\Users\Alexandre Del Picolo\Desktop\Estudos\new-back\CrudTesteTecnico2019.Database\bin\Debug\netcoreapp3.0\CrudTesteTecnico2019.Database.pdb
+C:\Users\Alexandre Del Picolo\Desktop\Estudos\new-back\CrudTesteTecnico2019.Database\bin\Debug\netcoreapp3.0\CrudTesteTecnico2019.Domain.dll
+C:\Users\Alexandre Del Picolo\Desktop\Estudos\new-back\CrudTesteTecnico2019.Database\bin\Debug\netcoreapp3.0\CrudTesteTecnico2019.Infrastructure.dll
+C:\Users\Alexandre Del Picolo\Desktop\Estudos\new-back\CrudTesteTecnico2019.Database\bin\Debug\netcoreapp3.0\CrudTesteTecnico2019.Domain.pdb
+C:\Users\Alexandre Del Picolo\Desktop\Estudos\new-back\CrudTesteTecnico2019.Database\bin\Debug\netcoreapp3.0\CrudTesteTecnico2019.Infrastructure.pdb
+C:\Users\Alexandre Del Picolo\Desktop\Estudos\new-back\CrudTesteTecnico2019.Database\obj\Debug\netcoreapp3.0\CrudTesteTecnico2019.Database.csprojAssemblyReference.cache
+C:\Users\Alexandre Del Picolo\Desktop\Estudos\new-back\CrudTesteTecnico2019.Database\obj\Debug\netcoreapp3.0\CrudTesteTecnico2019.Database.csproj.CoreCompileInputs.cache
+C:\Users\Alexandre Del Picolo\Desktop\Estudos\new-back\CrudTesteTecnico2019.Database\obj\Debug\netcoreapp3.0\CrudTesteTecnico2019.Database.AssemblyInfoInputs.cache
+C:\Users\Alexandre Del Picolo\Desktop\Estudos\new-back\CrudTesteTecnico2019.Database\obj\Debug\netcoreapp3.0\CrudTesteTecnico2019.Database.AssemblyInfo.cs
+C:\Users\Alexandre Del Picolo\Desktop\Estudos\new-back\CrudTesteTecnico2019.Database\obj\Debug\netcoreapp3.0\CrudTesteTecnico2019.Database.csproj.CopyComplete
+C:\Users\Alexandre Del Picolo\Desktop\Estudos\new-back\CrudTesteTecnico2019.Database\obj\Debug\netcoreapp3.0\CrudTesteTecnico2019.Database.dll
+C:\Users\Alexandre Del Picolo\Desktop\Estudos\new-back\CrudTesteTecnico2019.Database\obj\Debug\netcoreapp3.0\CrudTesteTecnico2019.Database.pdb

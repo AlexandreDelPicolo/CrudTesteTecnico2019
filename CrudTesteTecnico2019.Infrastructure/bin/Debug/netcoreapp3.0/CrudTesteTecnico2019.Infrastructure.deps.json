@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.0": {
+      "CrudTesteTecnico2019.Infrastructure/1.0.0": {
+        "runtime": {
+          "CrudTesteTecnico2019.Infrastructure.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CrudTesteTecnico2019.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,248 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Alexandre Del Picolo\\Desktop\\Estudos\\new-back\\CrudTesteTecnico2019.Web\\CrudTesteTecnico2019.Web.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Alexandre Del Picolo\\Desktop\\Estudos\\new-back\\CrudTesteTecnico2019.Database\\CrudTesteTecnico2019.Database.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Alexandre Del Picolo\\Desktop\\Estudos\\new-back\\CrudTesteTecnico2019.Database\\CrudTesteTecnico2019.Database.csproj",
+        "projectName": "CrudTesteTecnico2019.Database",
+        "projectPath": "C:\\Users\\Alexandre Del Picolo\\Desktop\\Estudos\\new-back\\CrudTesteTecnico2019.Database\\CrudTesteTecnico2019.Database.csproj",
+        "packagesPath": "C:\\Users\\Alexandre Del Picolo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Alexandre Del Picolo\\Desktop\\Estudos\\new-back\\CrudTesteTecnico2019.Database\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Alexandre Del Picolo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "C:\\Users\\Alexandre Del Picolo\\Desktop\\Estudos\\new-back\\CrudTesteTecnico2019.Domain\\CrudTesteTecnico2019.Domain.csproj": {
+                "projectPath": "C:\\Users\\Alexandre Del Picolo\\Desktop\\Estudos\\new-back\\CrudTesteTecnico2019.Domain\\CrudTesteTecnico2019.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "DotNetCore.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.8.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\Alexandre Del Picolo\\Desktop\\Estudos\\new-back\\CrudTesteTecnico2019.Domain\\CrudTesteTecnico2019.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Alexandre Del Picolo\\Desktop\\Estudos\\new-back\\CrudTesteTecnico2019.Domain\\CrudTesteTecnico2019.Domain.csproj",
+        "projectName": "CrudTesteTecnico2019.Domain",
+        "projectPath": "C:\\Users\\Alexandre Del Picolo\\Desktop\\Estudos\\new-back\\CrudTesteTecnico2019.Domain\\CrudTesteTecnico2019.Domain.csproj",
+        "packagesPath": "C:\\Users\\Alexandre Del Picolo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Alexandre Del Picolo\\Desktop\\Estudos\\new-back\\CrudTesteTecnico2019.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Alexandre Del Picolo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "C:\\Users\\Alexandre Del Picolo\\Desktop\\Estudos\\new-back\\CrudTesteTecnico2019.Infrastructure\\CrudTesteTecnico2019.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\Alexandre Del Picolo\\Desktop\\Estudos\\new-back\\CrudTesteTecnico2019.Infrastructure\\CrudTesteTecnico2019.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "MediatR": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\Alexandre Del Picolo\\Desktop\\Estudos\\new-back\\CrudTesteTecnico2019.Infrastructure\\CrudTesteTecnico2019.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Alexandre Del Picolo\\Desktop\\Estudos\\new-back\\CrudTesteTecnico2019.Infrastructure\\CrudTesteTecnico2019.Infrastructure.csproj",
+        "projectName": "CrudTesteTecnico2019.Infrastructure",
+        "projectPath": "C:\\Users\\Alexandre Del Picolo\\Desktop\\Estudos\\new-back\\CrudTesteTecnico2019.Infrastructure\\CrudTesteTecnico2019.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\Alexandre Del Picolo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Alexandre Del Picolo\\Desktop\\Estudos\\new-back\\CrudTesteTecnico2019.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Alexandre Del Picolo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\Alexandre Del Picolo\\Desktop\\Estudos\\new-back\\CrudTesteTecnico2019.Web\\CrudTesteTecnico2019.Web.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Alexandre Del Picolo\\Desktop\\Estudos\\new-back\\CrudTesteTecnico2019.Web\\CrudTesteTecnico2019.Web.csproj",
+        "projectName": "CrudTesteTecnico2019.Web",
+        "projectPath": "C:\\Users\\Alexandre Del Picolo\\Desktop\\Estudos\\new-back\\CrudTesteTecnico2019.Web\\CrudTesteTecnico2019.Web.csproj",
+        "packagesPath": "C:\\Users\\Alexandre Del Picolo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Alexandre Del Picolo\\Desktop\\Estudos\\new-back\\CrudTesteTecnico2019.Web\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Alexandre Del Picolo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "C:\\Users\\Alexandre Del Picolo\\Desktop\\Estudos\\new-back\\CrudTesteTecnico2019.Database\\CrudTesteTecnico2019.Database.csproj": {
+                "projectPath": "C:\\Users\\Alexandre Del Picolo\\Desktop\\Estudos\\new-back\\CrudTesteTecnico2019.Database\\CrudTesteTecnico2019.Database.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "MediatR": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.AspNetCore.App": {
+              "target": "Package",
+              "version": "[2.2.6, )"
+            },
+            "Microsoft.AspNetCore.Razor.Design": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}
