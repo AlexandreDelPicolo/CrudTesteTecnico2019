@@ -23,12 +23,12 @@ adicionar referencia de todos os projetos improtantes no application
 ### adicionar pacotes
 
 dotnet add CrudTesteTecnico2019.Database package Microsoft.EntityFrameworkCore.SqlServer
-dotnet add CrudTesteTecnico2019.Database package Microsoft.EntityFrameworkCore.Tools.DotNet
 dotnet add CrudTesteTecnico2019.Database package Microsoft.EntityFrameworkCore.Design
-dotnet add CrudTesteTecnico2019.Database package Microsoft.EntityFrameworkCore.Tools
 dotnet add .\CrudTesteTecnico2019.Domain\CrudTesteTecnico2019.Domain.csproj package MediatR
 dotnet add .\CrudTesteTecnico2019.Application\CrudTesteTecnico2019.Application.csproj package MediatR
 dotnet add .\CrudTesteTecnico2019.Web\CrudTesteTecnico2019.Web.csproj package MediatR
+
+--opcional-- dotnet add CrudTesteTecnico2019.Database package Microsoft.EntityFrameworkCore.Tools
 
 dar um restore e entrar no projeto de banco, pois apenas lá o ef funcionara
 
