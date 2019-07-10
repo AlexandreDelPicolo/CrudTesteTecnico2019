@@ -5,10 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="DotNetCore.EntityFrameworkCore" Version="8.8.0" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\CrudTesteTecnico2019.Domain\CrudTesteTecnico2019.Domain.csproj" />
   </ItemGroup>
 
