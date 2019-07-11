@@ -8,7 +8,7 @@ namespace CrudTesteTecnico2019.Database.Database.Usuario
         void Adicionar(UsuarioEntity usuario);
         void Editar(UsuarioEntity usuario);
         void Remover(UsuarioEntity usuario);
-        IEnumerable<object> Listar();
+        IEnumerable<UsuarioEntity> Listar();
         int SaveChanges();
     }
 }

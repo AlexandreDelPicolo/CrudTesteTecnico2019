@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace CrudTesteTecnico2019.Database.Database.Usuario
 {
-    public sealed class UserDomainConfiguration : IEntityTypeConfiguration<UsuarioEntity>
+    public sealed class UsuarioConfiguration : IEntityTypeConfiguration<UsuarioEntity>
     {
         public void Configure(EntityTypeBuilder<UsuarioEntity> builder)
         {
