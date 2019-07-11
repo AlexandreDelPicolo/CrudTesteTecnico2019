@@ -15,21 +15,32 @@ namespace CrudTesteTecnico2019.Web
     {
         public Startup(IConfiguration configuration)
         {
-            Configuration = configuration;
+            _configuration = configuration;
         }
 
-        public IConfiguration Configuration { get; }
+        public IConfiguration _configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            var configuration = services.BuildServiceProvider().GetRequiredService<IConfiguration>();
-            var connectionString = configuration.GetValue("ConnectionString", "ConnectionString");
-            services.AddDbContextPool<Context>(options => options.UseSqlServer(connectionString));
-            services.BuildServiceProvider().GetRequiredService<Context>().Database.Migrate();
+            ConfigurarBanco(services);
+            InjetarDependencias(services);
+        }
 
-            services.AddScoped<IUsuarioRepository, UsuarioRepository>();
+        private void ConfigurarBanco(IServiceCollection services)
+        {
+            services.AddDbContextPool<Context>(options => options.UseSqlServer(obterConnectionString()));
+            services.BuildServiceProvider().GetRequiredService<Context>().Database.Migrate();
+        }
+
+        private string obterConnectionString()
+        {
+            return _configuration["ConnectionString"];
+        }
+
+        private void InjetarDependencias(IServiceCollection services)
+        {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddScoped<IUsuarioRepository, UsuarioRepository>();
             services.AddMediatR
             (
                 typeof(Startup),
@@ -37,7 +48,6 @@ namespace CrudTesteTecnico2019.Web
             );
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             if (env.IsDevelopment())
@@ -46,7 +56,6 @@ namespace CrudTesteTecnico2019.Web
             }
             else
             {
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
 
