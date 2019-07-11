@@ -7,10 +7,10 @@ namespace CrudTesteTecnico2019.Web.Controllers
 {
     [Route("api/usuario")]
     [ApiController]
-    public class ValuesController : ControllerBase
+    public class UsuarioController : ControllerBase
     {
         private readonly IMediator _mediator;
-        public ValuesController(IMediator mediator)
+        public UsuarioController(IMediator mediator)
         {
             _mediator = mediator;
         }
