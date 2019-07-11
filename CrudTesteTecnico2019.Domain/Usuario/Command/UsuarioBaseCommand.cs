@@ -4,7 +4,7 @@ using System;
 
 namespace CrudTesteTecnico2019.Domain.Usuario.Command
 {
-    public class UsuarioCommand : IRequest<CommandResult>
+    public class UsuarioBaseCommand : IRequest<CommandResult>
     {
         public long UsuarioId { get; set; }
         public string Nome { get; set; }

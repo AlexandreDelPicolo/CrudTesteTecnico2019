@@ -28,6 +28,7 @@ dotnet add .\CrudTesteTecnico2019.Domain\CrudTesteTecnico2019.Domain.csproj pack
 dotnet add .\CrudTesteTecnico2019.Application\CrudTesteTecnico2019.Application.csproj package MediatR
 dotnet add .\CrudTesteTecnico2019.Web\CrudTesteTecnico2019.Web.csproj package MediatR
 dotnet add .\CrudTesteTecnico2019.Web\CrudTesteTecnico2019.Web.csproj package MediatR.Extensions.Microsoft.DependencyInjection
+dotnet add .\CrudTesteTecnico2019.Domain\CrudTesteTecnico2019.Domain.csproj package FluentValidation.AspNetCore
 
 --opcional-- dotnet add CrudTesteTecnico2019.Database package Microsoft.EntityFrameworkCore.Tools
 
