@@ -7,9 +7,9 @@ namespace CrudTesteTecnico2019.Domain.Usuario.Factory
 {
     public static class UsuarioFactory
     {
-        public static UsuarioEntity Create(UsuarioCommand command)
+        public static UsuarioEntity Create(UsuarioBaseCommand command)
         {
-            return new UsuarioEntity(command.UsuarioId,
+            return new UsuarioEntity(command.Id,
                                      command.Nome,
                                      command.Sobrenome,
                                      new Email(command.Email),

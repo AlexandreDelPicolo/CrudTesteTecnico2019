@@ -17,7 +17,7 @@ namespace CrudTesteTecnico2019.Web.Controllers
         }
 
         [HttpPost("adicionar")]
-        public async Task<CommandResult> Adicionar([FromBody] UsuarioCommand command)
+        public async Task<CommandResult> Adicionar([FromBody] UsuarioInsertCommand command)
         {
             return await _mediator.Send(command);
         }

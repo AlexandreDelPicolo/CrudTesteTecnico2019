@@ -6,7 +6,7 @@ namespace CrudTesteTecnico2019.Domain.Usuario.Command
 {
     public class UsuarioBaseCommand : IRequest<CommandResult>
     {
-        public long UsuarioId { get; set; }
+        public long Id { get; set; }
         public string Nome { get; set; }
         public string Sobrenome { get; set; }
         public string Email { get; set; }
