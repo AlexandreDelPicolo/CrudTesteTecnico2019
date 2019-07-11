@@ -14,16 +14,16 @@ namespace CrudTesteTecnico2019.Database.Database.Usuario
             _context = context;
         }
 
-        public void Adicionar(UsuarioDomain usuario) => _context.Set<UsuarioDomain>().Add(usuario);
+        public void Adicionar(UsuarioEntity usuario) => _context.Set<UsuarioEntity>().Add(usuario);
 
-        public void Editar(UsuarioDomain usuario) =>_context.Set<UsuarioDomain>().Update(usuario);
+        public void Editar(UsuarioEntity usuario) =>_context.Set<UsuarioEntity>().Update(usuario);
 
-        public void Remover(UsuarioDomain usuario) => _context.Set<UsuarioDomain>().Remove(usuario);
+        public void Remover(UsuarioEntity usuario) => _context.Set<UsuarioEntity>().Remove(usuario);
 
-        public IEnumerable<UsuarioDomain> Listar()
+        public IEnumerable<UsuarioEntity> Listar()
         {
             //_context.Usuario.ToList();
-            return _context.Set<UsuarioDomain>().ToList();
+            return _context.Set<UsuarioEntity>().ToList();
         }
 
         IEnumerable<object> IUsuarioRepository.Listar()

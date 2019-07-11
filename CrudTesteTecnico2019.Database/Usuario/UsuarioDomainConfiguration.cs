@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace CrudTesteTecnico2019.Database.Database.Usuario
 {
-    public sealed class UserDomainConfiguration : IEntityTypeConfiguration<UsuarioDomain>
+    public sealed class UserDomainConfiguration : IEntityTypeConfiguration<UsuarioEntity>
     {
-        public void Configure(EntityTypeBuilder<UsuarioDomain> builder)
+        public void Configure(EntityTypeBuilder<UsuarioEntity> builder)
         {
             builder.ToTable("Usuario_tb", "CrudTesteTecnico");
             builder.HasKey(x => x.UsuarioId);
@@ -16,12 +16,12 @@ namespace CrudTesteTecnico2019.Database.Database.Usuario
 
             builder.OwnsOne(x => x.Email, y =>
             {
-                y.Property(x => x.Value).HasColumnName(nameof(UsuarioDomain.Email)).IsRequired().HasMaxLength(300);
+                y.Property(x => x.Value).HasColumnName(nameof(UsuarioEntity.Email)).IsRequired().HasMaxLength(300);
             });
 
             builder.OwnsOne(x => x.DataNascimento, y =>
             {
-                y.Property(x => x.Value).HasColumnName(nameof(UsuarioDomain.DataNascimento)).IsRequired();
+                y.Property(x => x.Value).HasColumnName(nameof(UsuarioEntity.DataNascimento)).IsRequired();
             });
 
             builder.Property(x => (int)x.Perfil).IsRequired();

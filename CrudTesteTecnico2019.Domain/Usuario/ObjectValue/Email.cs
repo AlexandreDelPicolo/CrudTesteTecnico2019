@@ -16,16 +16,5 @@ namespace CrudTesteTecnico2019.Domain.Usuario.ObjectValue
         {
             return EmailHelper.ValidarFormato(Value);
         }
-
-        public override bool Equals(object obj)
-        {
-            return obj is Email email &&
-                   Value == email.Value;
-        }
-
-        public override int GetHashCode()
-        {
-            return -1937169414 + EqualityComparer<string>.Default.GetHashCode(Value);
-        }
     }
 }

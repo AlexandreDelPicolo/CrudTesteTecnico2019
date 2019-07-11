@@ -8,16 +8,5 @@
         }
 
         public int Value { get; }
-
-        public override bool Equals(object obj)
-        {
-            return obj is UsuarioId id &&
-                   Value == id.Value;
-        }
-
-        public override int GetHashCode()
-        {
-            return -1937169414 + Value.GetHashCode();
-        }
     }
 }

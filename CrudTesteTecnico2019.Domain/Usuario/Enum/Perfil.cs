@@ -1,6 +1,6 @@
 ﻿namespace CrudTesteTecnico2019.Domain.Usuario.Enum
 {
-    public enum PerfilEnum
+    public enum Perfil
     {
         Administrador = 1,
         Gestor = 2,

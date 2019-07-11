@@ -7,14 +7,14 @@ namespace CrudTesteTecnico2019.Domain.Usuario.Factory
 {
     public static class UsuarioFactory
     {
-        public static UsuarioDomain Create(UsuarioCommand command)
+        public static UsuarioEntity Create(UsuarioCommand command)
         {
-            return new UsuarioDomain(command.UsuarioId,
+            return new UsuarioEntity(command.UsuarioId,
                                      command.Nome,
                                      command.Sobrenome,
                                      new Email(command.Email),
                                      new DataNascimento(command.DataNascimento),
-                                     (PerfilEnum)command.Perfil);
+                                     (Perfil)command.Perfil);
         }
     }
 }

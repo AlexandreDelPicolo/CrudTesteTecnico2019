@@ -5,9 +5,9 @@ namespace CrudTesteTecnico2019.Database.Database.Usuario
 {
     public interface IUsuarioRepository
     {
-        void Adicionar(UsuarioDomain usuario);
-        void Editar(UsuarioDomain usuario);
-        void Remover(UsuarioDomain usuario);
+        void Adicionar(UsuarioEntity usuario);
+        void Editar(UsuarioEntity usuario);
+        void Remover(UsuarioEntity usuario);
         IEnumerable<object> Listar();
         int SaveChanges();
     }

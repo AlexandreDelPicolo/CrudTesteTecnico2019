@@ -14,14 +14,14 @@ namespace CrudTesteTecnico2019.Database.Database
 
         private static void SeedUsers(this ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<UsuarioDomain>(x =>
+            modelBuilder.Entity<UsuarioEntity>(x =>
             {
                 x.HasData(new
                 {
                     UsuarioId = 1L,
                     Nome = "Alexandre",
                     Sobrenome = "Del Picolo",
-                    Perfil = PerfilEnum.Usuario
+                    Perfil = Perfil.Usuario
                 });
 
                 x.OwnsOne(y => y.Email).HasData(new
@@ -43,7 +43,7 @@ namespace CrudTesteTecnico2019.Database.Database
                     UsuarioId = 2L,
                     Nome = "Rafael",
                     Sobrenome = "Garcia",
-                    Perfil = PerfilEnum.Administrador
+                    Perfil = Perfil.Administrador
                 });
 
                 x.OwnsOne(y => y.Email).HasData(new
@@ -64,7 +64,7 @@ namespace CrudTesteTecnico2019.Database.Database
                     UsuarioId = 3L,
                     Nome = "Luciano",
                     Sobrenome = "Lima",
-                    Perfil = PerfilEnum.Supervisor
+                    Perfil = Perfil.Supervisor
                 });
 
                 x.OwnsOne(y => y.Email).HasData(new
@@ -85,7 +85,7 @@ namespace CrudTesteTecnico2019.Database.Database
                     UsuarioId = 4L,
                     Nome = "Bruno",
                     Sobrenome = "Lima",
-                    Perfil = PerfilEnum.Supervisor
+                    Perfil = Perfil.Supervisor
                 });
 
                 x.OwnsOne(y => y.Email).HasData(new
