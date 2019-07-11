@@ -4,9 +4,9 @@ using System;
 
 namespace CrudTesteTecnico2019.Domain.Usuario.Validation
 {
-    public class UsuarioCommandValidator : AbstractValidator<UsuarioBaseCommand>
+    public class UsuarioBaseCommandValidator : AbstractValidator<UsuarioBaseCommand>
     {
-        public UsuarioCommandValidator()
+        public UsuarioBaseCommandValidator()
         {
             RuleFor(x => x.Nome)
                 .NotEmpty().WithMessage("O nome do usuário deve ser informado.")
