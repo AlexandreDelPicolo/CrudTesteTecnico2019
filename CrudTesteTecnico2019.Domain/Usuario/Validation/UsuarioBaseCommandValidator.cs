@@ -10,11 +10,11 @@ namespace CrudTesteTecnico2019.Domain.Usuario.Validation
         {
             RuleFor(x => x.Nome)
                 .NotEmpty().WithMessage("O nome do usuário deve ser informado.")
-                .Length(3, 100).WithMessage("O nome deve ter no mínimo 3 caracteres e np máximo 200 caracteres.");
+                .Length(3, 100).WithMessage("O nome deve ter no mínimo 3 caracteres e no máximo 200 caracteres.");
 
             RuleFor(x => x.Sobrenome)
                 .NotEmpty().WithMessage("O sobrenome do usuário deve ser informado.")
-                .Length(3, 100).WithMessage("O sobrenome deve ter no mínimo 3 caracteres e np máximo 200 caracteres.");
+                .Length(3, 100).WithMessage("O sobrenome deve ter no mínimo 3 caracteres e no máximo 200 caracteres.");
 
             RuleFor(x => x.Email)
                 .NotEmpty().WithMessage("O e-mail do usuário deve ser informado.")
