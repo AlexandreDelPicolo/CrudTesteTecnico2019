@@ -35,10 +35,10 @@ namespace CrudTesteTecnico2019.Database.Migrations
                 columns: new[] { "UsuarioId", "Nome", "Perfil", "Sobrenome", "DataNascimento", "Email" },
                 values: new object[,]
                 {
-                    { 1L, "Alexandre", 4, "Del Picolo", new DateTime(2019, 7, 10, 19, 0, 50, 64, DateTimeKind.Local).AddTicks(5232), "administrator@administrator.com" },
-                    { 2L, "Rafael", 1, "Garcia", new DateTime(1990, 7, 10, 19, 0, 50, 69, DateTimeKind.Local).AddTicks(525), "rafaelfgx@gmail.com" },
-                    { 3L, "Luciano", 3, "Lima", new DateTime(1992, 7, 10, 19, 0, 50, 69, DateTimeKind.Local).AddTicks(915), "lucishow@gmail.com" },
-                    { 4L, "Bruno", 3, "Lima", new DateTime(1992, 7, 10, 19, 0, 50, 69, DateTimeKind.Local).AddTicks(1223), "bruno.lima@gmail.com" }
+                    { 1L, "Alexandre", 4, "Del Picolo", new DateTime(2019, 7, 11, 0, 10, 42, 852, DateTimeKind.Local).AddTicks(1550), "administrator@administrator.com" },
+                    { 2L, "Rafael", 1, "Garcia", new DateTime(1990, 7, 11, 0, 10, 42, 858, DateTimeKind.Local).AddTicks(7504), "rafaelfgx@gmail.com" },
+                    { 3L, "Luciano", 3, "Lima", new DateTime(1992, 7, 11, 0, 10, 42, 858, DateTimeKind.Local).AddTicks(8521), "lucishow@gmail.com" },
+                    { 4L, "Bruno", 3, "Lima", new DateTime(1992, 7, 11, 0, 10, 42, 858, DateTimeKind.Local).AddTicks(9239), "bruno.lima@gmail.com" }
                 });
         }
 

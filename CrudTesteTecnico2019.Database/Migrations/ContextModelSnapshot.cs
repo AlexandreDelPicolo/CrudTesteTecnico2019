@@ -19,7 +19,7 @@ namespace CrudTesteTecnico2019.Database.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("CrudTesteTecnico2019.Domain.Usuario.Entity.UsuarioDomain", b =>
+            modelBuilder.Entity("CrudTesteTecnico2019.Domain.Usuario.Entity.UsuarioEntity", b =>
                 {
                     b.Property<long>("UsuarioId")
                         .ValueGeneratedOnAdd()
@@ -70,52 +70,52 @@ namespace CrudTesteTecnico2019.Database.Migrations
                         });
                 });
 
-            modelBuilder.Entity("CrudTesteTecnico2019.Domain.Usuario.Entity.UsuarioDomain", b =>
+            modelBuilder.Entity("CrudTesteTecnico2019.Domain.Usuario.Entity.UsuarioEntity", b =>
                 {
                     b.OwnsOne("CrudTesteTecnico2019.Domain.Usuario.ObjectValue.DataNascimento", "DataNascimento", b1 =>
                         {
-                            b1.Property<long>("UsuarioDomainUsuarioId")
+                            b1.Property<long>("UsuarioEntityUsuarioId")
                                 .ValueGeneratedOnAdd()
                                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                             b1.Property<DateTime>("Value")
                                 .HasColumnName("DataNascimento");
 
-                            b1.HasKey("UsuarioDomainUsuarioId");
+                            b1.HasKey("UsuarioEntityUsuarioId");
 
                             b1.ToTable("Usuario_tb","CrudTesteTecnico");
 
-                            b1.HasOne("CrudTesteTecnico2019.Domain.Usuario.Entity.UsuarioDomain")
+                            b1.HasOne("CrudTesteTecnico2019.Domain.Usuario.Entity.UsuarioEntity")
                                 .WithOne("DataNascimento")
-                                .HasForeignKey("CrudTesteTecnico2019.Domain.Usuario.ObjectValue.DataNascimento", "UsuarioDomainUsuarioId")
+                                .HasForeignKey("CrudTesteTecnico2019.Domain.Usuario.ObjectValue.DataNascimento", "UsuarioEntityUsuarioId")
                                 .OnDelete(DeleteBehavior.Cascade);
 
                             b1.HasData(
                                 new
                                 {
-                                    UsuarioDomainUsuarioId = 1L,
-                                    Value = new DateTime(2019, 7, 10, 19, 0, 50, 64, DateTimeKind.Local).AddTicks(5232)
+                                    UsuarioEntityUsuarioId = 1L,
+                                    Value = new DateTime(2019, 7, 11, 0, 10, 42, 852, DateTimeKind.Local).AddTicks(1550)
                                 },
                                 new
                                 {
-                                    UsuarioDomainUsuarioId = 2L,
-                                    Value = new DateTime(1990, 7, 10, 19, 0, 50, 69, DateTimeKind.Local).AddTicks(525)
+                                    UsuarioEntityUsuarioId = 2L,
+                                    Value = new DateTime(1990, 7, 11, 0, 10, 42, 858, DateTimeKind.Local).AddTicks(7504)
                                 },
                                 new
                                 {
-                                    UsuarioDomainUsuarioId = 3L,
-                                    Value = new DateTime(1992, 7, 10, 19, 0, 50, 69, DateTimeKind.Local).AddTicks(915)
+                                    UsuarioEntityUsuarioId = 3L,
+                                    Value = new DateTime(1992, 7, 11, 0, 10, 42, 858, DateTimeKind.Local).AddTicks(8521)
                                 },
                                 new
                                 {
-                                    UsuarioDomainUsuarioId = 4L,
-                                    Value = new DateTime(1992, 7, 10, 19, 0, 50, 69, DateTimeKind.Local).AddTicks(1223)
+                                    UsuarioEntityUsuarioId = 4L,
+                                    Value = new DateTime(1992, 7, 11, 0, 10, 42, 858, DateTimeKind.Local).AddTicks(9239)
                                 });
                         });
 
                     b.OwnsOne("CrudTesteTecnico2019.Domain.Usuario.ObjectValue.Email", "Email", b1 =>
                         {
-                            b1.Property<long>("UsuarioDomainUsuarioId")
+                            b1.Property<long>("UsuarioEntityUsuarioId")
                                 .ValueGeneratedOnAdd()
                                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
@@ -124,34 +124,34 @@ namespace CrudTesteTecnico2019.Database.Migrations
                                 .HasColumnName("Email")
                                 .HasMaxLength(300);
 
-                            b1.HasKey("UsuarioDomainUsuarioId");
+                            b1.HasKey("UsuarioEntityUsuarioId");
 
                             b1.ToTable("Usuario_tb","CrudTesteTecnico");
 
-                            b1.HasOne("CrudTesteTecnico2019.Domain.Usuario.Entity.UsuarioDomain")
+                            b1.HasOne("CrudTesteTecnico2019.Domain.Usuario.Entity.UsuarioEntity")
                                 .WithOne("Email")
-                                .HasForeignKey("CrudTesteTecnico2019.Domain.Usuario.ObjectValue.Email", "UsuarioDomainUsuarioId")
+                                .HasForeignKey("CrudTesteTecnico2019.Domain.Usuario.ObjectValue.Email", "UsuarioEntityUsuarioId")
                                 .OnDelete(DeleteBehavior.Cascade);
 
                             b1.HasData(
                                 new
                                 {
-                                    UsuarioDomainUsuarioId = 1L,
+                                    UsuarioEntityUsuarioId = 1L,
                                     Value = "administrator@administrator.com"
                                 },
                                 new
                                 {
-                                    UsuarioDomainUsuarioId = 2L,
+                                    UsuarioEntityUsuarioId = 2L,
                                     Value = "rafaelfgx@gmail.com"
                                 },
                                 new
                                 {
-                                    UsuarioDomainUsuarioId = 3L,
+                                    UsuarioEntityUsuarioId = 3L,
                                     Value = "lucishow@gmail.com"
                                 },
                                 new
                                 {
-                                    UsuarioDomainUsuarioId = 4L,
+                                    UsuarioEntityUsuarioId = 4L,
                                     Value = "bruno.lima@gmail.com"
                                 });
                         });

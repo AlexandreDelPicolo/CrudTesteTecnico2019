@@ -26,13 +26,13 @@ namespace CrudTesteTecnico2019.Database.Database
 
                 x.OwnsOne(y => y.Email).HasData(new
                 {
-                    UsuarioDomainUsuarioId = 1L,
+                    UsuarioEntityUsuarioId = 1L,
                     Value = "administrator@administrator.com"
                 });
 
                 x.OwnsOne(y => y.DataNascimento).HasData(new
                 {
-                    UsuarioDomainUsuarioId = 1L,
+                    UsuarioEntityUsuarioId = 1L,
                     Value = DateTime.Now
                 });
 
@@ -48,13 +48,13 @@ namespace CrudTesteTecnico2019.Database.Database
 
                 x.OwnsOne(y => y.Email).HasData(new
                 {
-                    UsuarioDomainUsuarioId = 2L,
+                    UsuarioEntityUsuarioId = 2L,
                     Value = "rafaelfgx@gmail.com"
                 });
 
                 x.OwnsOne(y => y.DataNascimento).HasData(new
                 {
-                    UsuarioDomainUsuarioId = 2L,
+                    UsuarioEntityUsuarioId = 2L,
                     Value = DateTime.Now.AddYears(-29)
                 });
 
@@ -69,13 +69,13 @@ namespace CrudTesteTecnico2019.Database.Database
 
                 x.OwnsOne(y => y.Email).HasData(new
                 {
-                    UsuarioDomainUsuarioId = 3L,
+                    UsuarioEntityUsuarioId = 3L,
                     Value = "lucishow@gmail.com"
                 });
 
                 x.OwnsOne(y => y.DataNascimento).HasData(new
                 {
-                    UsuarioDomainUsuarioId = 3L,
+                    UsuarioEntityUsuarioId = 3L,
                     Value = DateTime.Now.AddYears(-27)
                 });
 
@@ -90,13 +90,13 @@ namespace CrudTesteTecnico2019.Database.Database
 
                 x.OwnsOne(y => y.Email).HasData(new
                 {
-                    UsuarioDomainUsuarioId = 4L,
+                    UsuarioEntityUsuarioId = 4L,
                     Value = "bruno.lima@gmail.com"
                 });
 
                 x.OwnsOne(y => y.DataNascimento).HasData(new
                 {
-                    UsuarioDomainUsuarioId = 4L,
+                    UsuarioEntityUsuarioId = 4L,
                     Value = DateTime.Now.AddYears(-27)
                 });
             });
