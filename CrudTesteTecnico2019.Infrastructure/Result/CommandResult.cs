@@ -1,14 +1,14 @@
-﻿namespace CrudTesteTecnico2019.Infrastructure.ReturnResult
+﻿namespace CrudTesteTecnico2019.Infrastructure.Result
 {
-    public class Result
+    public class CommandResult
     {
-        public Result(bool success, string message)
+        public CommandResult(bool success, string message)
         {
             Success = success;
             Message = message;
         }
 
-        public Result(bool success)
+        public CommandResult(bool success)
         {
             Success = success;
         }

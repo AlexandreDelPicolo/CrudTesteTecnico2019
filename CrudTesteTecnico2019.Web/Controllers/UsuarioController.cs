@@ -1,5 +1,6 @@
 ﻿using System.Threading.Tasks;
 using CrudTesteTecnico2019.Domain.Usuario.Command;
+using CrudTesteTecnico2019.Infrastructure.Result;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -16,9 +17,9 @@ namespace CrudTesteTecnico2019.Web.Controllers
         }
 
         [HttpPost("adicionar")]
-        public async Task Adicionar([FromBody] UsuarioCommand command)
+        public async Task<CommandResult> Adicionar([FromBody] UsuarioCommand command)
         {
-            await _mediator.Send(command);
+            return await _mediator.Send(command);
         }
     }
 }

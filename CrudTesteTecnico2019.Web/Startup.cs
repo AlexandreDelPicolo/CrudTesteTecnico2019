@@ -1,6 +1,8 @@
 ﻿using CrudTesteTecnico2019.Application.Usuario.Handler;
 using CrudTesteTecnico2019.Database.Database;
 using CrudTesteTecnico2019.Database.Database.Usuario;
+using CrudTesteTecnico2019.Infrastructure.ManagerResult;
+using CrudTesteTecnico2019.Infrastructure.Result;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -41,6 +43,7 @@ namespace CrudTesteTecnico2019.Web
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.AddScoped<IUsuarioRepository, UsuarioRepository>();
+            services.AddScoped<IManagerResult, ManagerResult>();
             services.AddMediatR
             (
                 typeof(Startup),

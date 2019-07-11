@@ -1,9 +1,10 @@
-﻿using MediatR;
+﻿using CrudTesteTecnico2019.Infrastructure.Result;
+using MediatR;
 using System;
 
 namespace CrudTesteTecnico2019.Domain.Usuario.Command
 {
-    public class UsuarioCommand : IRequest
+    public class UsuarioCommand : IRequest<CommandResult>
     {
         public long UsuarioId { get; set; }
         public string Nome { get; set; }
