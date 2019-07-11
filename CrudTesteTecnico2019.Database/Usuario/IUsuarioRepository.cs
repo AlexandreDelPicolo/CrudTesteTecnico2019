@@ -9,5 +9,6 @@ namespace CrudTesteTecnico2019.Database.Database.Usuario
         void Editar(UsuarioDomain usuario);
         void Remover(UsuarioDomain usuario);
         IEnumerable<object> Listar();
+        int SaveChanges();
     }
 }

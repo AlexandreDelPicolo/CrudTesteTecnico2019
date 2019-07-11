@@ -30,5 +30,10 @@ namespace CrudTesteTecnico2019.Database.Database.Usuario
         {
             throw new NotImplementedException();
         }
+
+        public int SaveChanges()
+        {
+            return _context.SaveChanges();
+        }
     }
 }

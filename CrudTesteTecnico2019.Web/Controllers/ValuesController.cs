@@ -1,23 +1,21 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using CrudTesteTecnico2019.Domain.Usuario.Command;
 using MediatR;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace CrudTesteTecnico2019.Web.Controller
+namespace CrudTesteTecnico2019.Web.Controllers
 {
-    [Route("v1/usuario")]
+    [Route("api/usuario")]
     [ApiController]
-    public class UsuarioController : ControllerBase
+    public class ValuesController : ControllerBase
     {
         private readonly IMediator _mediator;
-        public UsuarioController(IMediator mediator)
+        public ValuesController(IMediator mediator)
         {
             _mediator = mediator;
         }
 
-        [HttpPost("adicionar"), AllowAnonymous]
+        [HttpPost("adicionar")]
         public async Task Adicionar([FromBody] UsuarioCommand command)
         {
             await _mediator.Send(command);
