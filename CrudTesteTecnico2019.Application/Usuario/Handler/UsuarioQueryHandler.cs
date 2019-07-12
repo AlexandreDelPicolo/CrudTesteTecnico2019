@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CrudTesteTecnico2019.Application.Usuario.Handler
 {
-    public class UsuarioQueryHandler : IRequestHandler<UsuarioQuery, IEnumerable<UsuarioModel>>
+    public class UsuarioQueryHandler : IRequestHandler<ListarUsuarioQuery, IEnumerable<UsuarioModel>>
     {
         private readonly IUsuarioRepository _usuarioRepository;
 
@@ -17,12 +17,9 @@ namespace CrudTesteTecnico2019.Application.Usuario.Handler
             _usuarioRepository = usuarioRepository;
         }
 
-        public async Task<IEnumerable<UsuarioModel>> Handle(UsuarioQuery request, CancellationToken cancellationToken)
+        public async Task<IEnumerable<UsuarioModel>> Handle(ListarUsuarioQuery request, CancellationToken cancellationToken)
         {
-            return await Task.Run(() =>
-            {
-                return _usuarioRepository.Listar();
-            });
+            return await Task.FromResult(_usuarioRepository.Listar());
         }
     }
 }

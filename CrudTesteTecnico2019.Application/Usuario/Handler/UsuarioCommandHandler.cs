@@ -1,6 +1,5 @@
 ﻿using CrudTesteTecnico2019.Database.Database.Usuario;
 using CrudTesteTecnico2019.Domain.Usuario.Command;
-using CrudTesteTecnico2019.Domain.Usuario.Entity;
 using CrudTesteTecnico2019.Domain.Usuario.Factory;
 using CrudTesteTecnico2019.Infrastructure.ManagerResult;
 using CrudTesteTecnico2019.Infrastructure.Result;
@@ -10,13 +9,14 @@ using System.Threading.Tasks;
 
 namespace CrudTesteTecnico2019.Application.Usuario.Handler
 {
-
-    public class UsuarioCommandHandler : IRequestHandler<UsuarioInsertCommand, CommandResult>,
-                                         IRequestHandler<UsuarioEditCommand, CommandResult>,
-                                         IRequestHandler<UsuarioDeleteCommand, CommandResult>
+    public class UsuarioCommandHandler :
+        IRequestHandler<InserirUsuarioCommand, CommandResult>,
+        IRequestHandler<AtualizarUsuarioCommand, CommandResult>,
+        IRequestHandler<ExcluirUsuarioCommand, CommandResult>
     {
-        private readonly IUsuarioRepository _usuarioRepository;
         private readonly IManagerResult _managerResult;
+
+        private readonly IUsuarioRepository _usuarioRepository;
 
         public UsuarioCommandHandler(IUsuarioRepository usuarioRepository, IManagerResult managerResult)
         {
@@ -24,37 +24,43 @@ namespace CrudTesteTecnico2019.Application.Usuario.Handler
             _managerResult = managerResult;
         }
 
-        public async Task<CommandResult> Handle(UsuarioInsertCommand request, CancellationToken cancellationToken)
+        public async Task<CommandResult> Handle(InserirUsuarioCommand request, CancellationToken cancellationToken)
         {
-            return await Task.Run(() =>
-            {
-                UsuarioEntity usuario = UsuarioFactory.Create(request);
-                _usuarioRepository.Adicionar(usuario);
-                _usuarioRepository.SaveChanges();
-                return _managerResult.Success("Usuario adicionado com sucesso.");
-            });
+            var usuario = UsuarioFactory.Create(request);
+
+            _usuarioRepository.Inserir(usuario);
+
+            _usuarioRepository.SaveChanges();
+
+            var resultado = _managerResult.Success("Usuário inserido com sucesso.");
+
+            return await Task.FromResult(resultado);
         }
 
-        public async Task<CommandResult> Handle(UsuarioEditCommand request, CancellationToken cancellationToken)
+        public async Task<CommandResult> Handle(AtualizarUsuarioCommand request, CancellationToken cancellationToken)
         {
-            return await Task.Run(() =>
-            {
-                UsuarioEntity usuario = UsuarioFactory.Create(request);
-                _usuarioRepository.Editar(usuario);
-                _usuarioRepository.SaveChanges();
-                return _managerResult.Success("Usuario atualizado com sucesso.");
-            });
+            var usuario = UsuarioFactory.Create(request);
+
+            _usuarioRepository.Atualizar(usuario);
+
+            _usuarioRepository.SaveChanges();
+
+            var resultado = _managerResult.Success("Usuário atualizado com sucesso.");
+
+            return await Task.FromResult(resultado);
         }
 
-        public async Task<CommandResult> Handle(UsuarioDeleteCommand request, CancellationToken cancellationToken)
+        public async Task<CommandResult> Handle(ExcluirUsuarioCommand request, CancellationToken cancellationToken)
         {
-            return await Task.Run(() =>
-            {
-                UsuarioEntity usuario = UsuarioFactory.Create(request);
-                _usuarioRepository.Remover(usuario);
-                _usuarioRepository.SaveChanges();
-                return _managerResult.Success("Usuario removido com sucesso.");
-            });
+            var usuario = UsuarioFactory.Create(request);
+
+            _usuarioRepository.Excluir(usuario);
+
+            _usuarioRepository.SaveChanges();
+
+            var resultado = _managerResult.Success("Usuário excluído com sucesso.");
+
+            return await Task.FromResult(resultado);
         }
     }
 }

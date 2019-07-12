@@ -14,19 +14,24 @@ namespace CrudTesteTecnico2019.Database.Database.Usuario
             _context = context;
         }
 
-        public void Adicionar(UsuarioEntity usuario)
-        {
-            _context.Set<UsuarioEntity>().Add(usuario);
-        }
-
-        public void Editar(UsuarioEntity usuario)
+        public void Atualizar(UsuarioEntity usuario)
         {
             _context.Set<UsuarioEntity>().Update(usuario);
         }
 
+        public void Excluir(UsuarioEntity usuario)
+        {
+            _context.Set<UsuarioEntity>().Remove(usuario);
+        }
+
+        public void Inserir(UsuarioEntity usuario)
+        {
+            _context.Set<UsuarioEntity>().Add(usuario);
+        }
+
         public IEnumerable<UsuarioModel> Listar()
         {
-            return _context.Set<UsuarioEntity>().ToList().Select(x =>
+            return _context.Set<UsuarioEntity>().Select(x =>
             new UsuarioModel
             {
                 Id = x.UsuarioId,
@@ -38,11 +43,7 @@ namespace CrudTesteTecnico2019.Database.Database.Usuario
             });
         }
 
-        public void Remover(UsuarioEntity usuario)
-        {
-            _context.Set<UsuarioEntity>().Remove(usuario);
-        }
-
+        /// TODO: Remover esse método e utilizar um Unit of Work
         public int SaveChanges()
         {
             return _context.SaveChanges();
