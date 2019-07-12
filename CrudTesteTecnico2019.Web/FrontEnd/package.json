@@ -31,7 +31,7 @@
     "typescript": "~3.4.3"
   },
   "scripts": {
-    "start": "ng lint && ng serve",
+    "start": "ng lint && ng serve --open",
     "production": "ng lint && ng build --configuration=production"
   }
 }
