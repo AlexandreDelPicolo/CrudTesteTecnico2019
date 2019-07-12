@@ -4,6 +4,7 @@
 *.suo
 *.tmp
 *.user
+*.txt
 .vs
 [Bb]in
 [Dd]ebug
