@@ -16,21 +16,23 @@ namespace CrudTesteTecnico2019.Web.Controllers
             _mediator = mediator;
         }
 
-        [HttpPost("adicionar")]
+        [HttpPost]
         public async Task<CommandResult> Adicionar([FromBody] UsuarioInsertCommand command)
         {
             return await _mediator.Send(command);
         }
 
-        [HttpPut("editar/{id}")]
-        public async Task<CommandResult> Editar([FromBody] UsuarioEditCommand command)
+        [HttpPut("{id}")]
+        public async Task<CommandResult> Editar([FromRoute] long id, [FromBody] UsuarioEditCommand command)
         {
+            command.Id = id;
             return await _mediator.Send(command);
         }
 
-        [HttpDelete("remover/{id}")]
-        public async Task<CommandResult> Remover([FromBody] UsuarioDeleteCommand command)
+        [HttpDelete("{id}")]
+        public async Task<CommandResult> Remover([FromRoute] long id, [FromBody] UsuarioDeleteCommand command)
         {
+            command.Id = id;
             return await _mediator.Send(command);
         }
     }
