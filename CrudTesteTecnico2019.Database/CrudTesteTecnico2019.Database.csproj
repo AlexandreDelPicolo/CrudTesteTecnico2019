@@ -11,6 +11,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CrudTesteTecnico2019.Domain\CrudTesteTecnico2019.Domain.csproj" />
+    <ProjectReference Include="..\CrudTesteTecnico2019.Model\CrudTesteTecnico2019.Model.csproj" />
   </ItemGroup>
 
 </Project>

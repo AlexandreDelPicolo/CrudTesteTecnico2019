@@ -1,4 +1,5 @@
 ﻿using CrudTesteTecnico2019.Domain.Usuario.Entity;
+using CrudTesteTecnico2019.Model.Usuario;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -28,9 +29,9 @@ namespace CrudTesteTecnico2019.Database.Database.Usuario
             _context.Set<UsuarioEntity>().Remove(usuario);
         }
 
-        public IEnumerable<UsuarioEntity> Listar()
+        public IEnumerable<UsuarioModel> Listar()
         {
-            return _context.Set<UsuarioEntity>().ToList();
+            return _context.Set<UsuarioModel>().ToList();
         }
 
         public int SaveChanges()

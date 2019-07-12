@@ -1,4 +1,5 @@
 ﻿using CrudTesteTecnico2019.Domain.Usuario.Entity;
+using CrudTesteTecnico2019.Model.Usuario;
 using System.Collections.Generic;
 
 namespace CrudTesteTecnico2019.Database.Database.Usuario
@@ -8,7 +9,7 @@ namespace CrudTesteTecnico2019.Database.Database.Usuario
         void Adicionar(UsuarioEntity usuario);
         void Editar(UsuarioEntity usuario);
         void Remover(UsuarioEntity usuario);
-        IEnumerable<UsuarioEntity> Listar();
+        IEnumerable<UsuarioModel> Listar();
         int SaveChanges();
     }
 }
