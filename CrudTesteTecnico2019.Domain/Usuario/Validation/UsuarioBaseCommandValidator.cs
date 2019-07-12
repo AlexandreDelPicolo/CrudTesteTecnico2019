@@ -22,8 +22,8 @@ namespace CrudTesteTecnico2019.Domain.Usuario.Validation
 
             RuleFor(x => x.DataNascimento)
                 .NotEmpty().WithMessage("O data de nascimento do usuário deve ser informada.")
-                .LessThan(DateTime.MinValue).WithMessage("Data de nascimento inválida.")
-                .GreaterThanOrEqualTo(DateTime.Now).WithMessage("Data de nascimento inválida.");
+                .LessThan(DateTime.Now).WithMessage("Data de nascimento inválida.")
+                .GreaterThanOrEqualTo(DateTime.MinValue).WithMessage("Data de nascimento inválida.");
 
             RuleFor(x => x.Perfil)
                 .GreaterThan(0).WithMessage("Perfil informado inválido.");
