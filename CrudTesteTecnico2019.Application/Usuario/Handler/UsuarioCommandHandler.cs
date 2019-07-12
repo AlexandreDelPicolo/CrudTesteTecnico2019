@@ -11,7 +11,8 @@ using System.Threading.Tasks;
 namespace CrudTesteTecnico2019.Application.Usuario.Handler
 {
 
-    public class UsuarioCommandHandler : IRequestHandler<UsuarioInsertCommand, CommandResult>
+    public class UsuarioCommandHandler : IRequestHandler<UsuarioInsertCommand, CommandResult>,
+                                         IRequestHandler<UsuarioEditCommand, CommandResult>
     {
         private readonly IUsuarioRepository _usuarioRepository;
         private readonly IManagerResult _managerResult;
@@ -30,6 +31,17 @@ namespace CrudTesteTecnico2019.Application.Usuario.Handler
                 _usuarioRepository.Adicionar(usuario);
                 _usuarioRepository.SaveChanges();
                 return _managerResult.Success("Usuario adicionado com sucesso.");
+            });
+        }
+
+        public async Task<CommandResult> Handle(UsuarioEditCommand request, CancellationToken cancellationToken)
+        {
+            return await Task.Run(() =>
+            {
+                UsuarioEntity usuario = UsuarioFactory.Create(request);
+                _usuarioRepository.Editar(usuario);
+                _usuarioRepository.SaveChanges();
+                return _managerResult.Success("Usuario atualizado com sucesso.");
             });
         }
     }

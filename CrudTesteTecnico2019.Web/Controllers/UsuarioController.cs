@@ -21,5 +21,11 @@ namespace CrudTesteTecnico2019.Web.Controllers
         {
             return await _mediator.Send(command);
         }
+
+        [HttpPut("editar")]
+        public async Task<CommandResult> Editar([FromBody] UsuarioEditCommand command)
+        {
+            return await _mediator.Send(command);
+        }
     }
 }

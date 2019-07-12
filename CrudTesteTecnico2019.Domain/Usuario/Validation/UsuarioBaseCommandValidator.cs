@@ -1,5 +1,4 @@
 ﻿using CrudTesteTecnico2019.Domain.Usuario.Command;
-using CrudTesteTecnico2019.Domain.Usuario.Enum;
 using FluentValidation;
 using System;
 
@@ -27,8 +26,8 @@ namespace CrudTesteTecnico2019.Domain.Usuario.Validation
                 .GreaterThanOrEqualTo(DateTime.MinValue).WithMessage("Data de nascimento inválida.");
 
             RuleFor(x => x.Perfil)
-                .LessThan((int)Perfil.Administrador).WithMessage("Perfil informado inválido.")
-                .GreaterThan((int)Perfil.Usuario).WithMessage("Perfil informado inválido.");
+                .LessThan(4).WithMessage("Perfil informado inválido.")
+                .GreaterThan(0).WithMessage("Perfil informado inválido.");
         }
     }
 }
