@@ -24,14 +24,23 @@ namespace CrudTesteTecnico2019.Database.Database.Usuario
             _context.Set<UsuarioEntity>().Update(usuario);
         }
 
+        public IEnumerable<UsuarioModel> Listar()
+        {
+            return _context.Set<UsuarioEntity>().ToList().Select(x =>
+            new UsuarioModel
+            {
+                Id = x.UsuarioId,
+                Nome = x.Nome,
+                Sobrenome = x.Sobrenome,
+                DataNascimento = x.DataNascimento.Value,
+                Email = x.Email.Value,
+                Perfil = (int)x.Perfil
+            });
+        }
+
         public void Remover(UsuarioEntity usuario)
         {
             _context.Set<UsuarioEntity>().Remove(usuario);
-        }
-
-        public IEnumerable<UsuarioModel> Listar()
-        {
-            return _context.Set<UsuarioModel>().ToList();
         }
 
         public int SaveChanges()

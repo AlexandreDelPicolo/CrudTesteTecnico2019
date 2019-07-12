@@ -1,7 +1,10 @@
 ﻿using CrudTesteTecnico2019.Domain.Usuario.Command;
+using CrudTesteTecnico2019.Domain.Usuario.Query;
 using CrudTesteTecnico2019.Infrastructure.Result;
+using CrudTesteTecnico2019.Model.Usuario;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace CrudTesteTecnico2019.Web.Controllers
@@ -36,6 +39,10 @@ namespace CrudTesteTecnico2019.Web.Controllers
             return await _mediator.Send(command);
         }
 
-
+        [HttpGet]
+        public async Task<IEnumerable<UsuarioModel>> Listar()
+        {
+            return await _mediator.Send(new UsuarioQuery());
+        }
     }
 }
