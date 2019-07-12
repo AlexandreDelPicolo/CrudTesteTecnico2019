@@ -13,6 +13,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace CrudTesteTecnico2019.Web
 {
@@ -38,6 +39,12 @@ namespace CrudTesteTecnico2019.Web
 
             app.UseHttpsRedirection();
             app.UseMvc();
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.RoutePrefix = "swagger";
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Crud teste técnico 2019");
+            });
         }
 
         public void ConfigureServices(IServiceCollection services)
@@ -45,6 +52,7 @@ namespace CrudTesteTecnico2019.Web
             AdicionarBancoDados(services);
             AdicionarDependencias(services);
             AdicionarValidators(services);
+            AdicionarSwagger(services);
         }
 
         private void AdicionarBancoDados(IServiceCollection services)
@@ -69,6 +77,25 @@ namespace CrudTesteTecnico2019.Web
             services.AddTransient<IValidator<InserirUsuarioCommand>, InserirUsuarioCommandValidator>();
             services.AddTransient<IValidator<AtualizarUsuarioCommand>, AtualizarUsuarioCommandValidator>();
             services.AddTransient<IValidator<ExcluirUsuarioCommand>, ExcluirUsuarioCommandValidator>();
+        }
+
+        private void AdicionarSwagger(IServiceCollection services)
+        {
+            services.AddSwaggerGen(options =>
+            {
+                options.SwaggerDoc("v1",
+                    new Info
+                    {
+                        Title = "Crud test técnico 2019",
+                        Version = "v1",
+                        Description = "Teste técnico para avaliar meu conhecimento em .net core e angular.",
+                        Contact = new Contact
+                        {
+                            Name = "Alexandre Del Picolo",
+                            Url = "https://github.com/AlexandreDelPicolo"
+                        }
+                    });
+            });
         }
     }
 }
