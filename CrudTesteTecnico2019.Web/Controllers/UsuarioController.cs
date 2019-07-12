@@ -42,6 +42,7 @@ namespace CrudTesteTecnico2019.Web.Controllers
             return await _mediator.Send(command);
         }
 
+
         [HttpGet]
         public async Task<IEnumerable<UsuarioModel>> Listar()
         {
