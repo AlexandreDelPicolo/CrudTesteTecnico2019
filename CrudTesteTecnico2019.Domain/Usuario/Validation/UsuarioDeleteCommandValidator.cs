@@ -1,9 +1,8 @@
-﻿using CrudTesteTecnico2019.Domain.Usuario.Command;
-using FluentValidation;
+﻿using FluentValidation;
 
 namespace CrudTesteTecnico2019.Domain.Usuario.Validation
 {
-    public class UsuarioDeleteCommandValidator : AbstractValidator<UsuarioDeleteCommand>
+    public class UsuarioDeleteCommandValidator : UsuarioBaseCommandValidator
     {
         public UsuarioDeleteCommandValidator()
         {

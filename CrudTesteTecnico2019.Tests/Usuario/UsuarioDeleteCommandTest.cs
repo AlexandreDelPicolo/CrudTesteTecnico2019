@@ -6,7 +6,7 @@ using System.Linq;
 namespace CrudTesteTecnico2019.Tests.Usuario
 {
     [TestClass]
-    public class UsuarioDeleteCommandTest
+    public class UsuarioDeleteCommandTest : UsuarioBaseCommandTest
     {
         [TestMethod]
         public void DeveSer_Invalido_Quando_Id_Nao_Informado()

@@ -12,7 +12,8 @@ namespace CrudTesteTecnico2019.Application.Usuario.Handler
 {
 
     public class UsuarioCommandHandler : IRequestHandler<UsuarioInsertCommand, CommandResult>,
-                                         IRequestHandler<UsuarioEditCommand, CommandResult>
+                                         IRequestHandler<UsuarioEditCommand, CommandResult>,
+                                         IRequestHandler<UsuarioDeleteCommand, CommandResult>
     {
         private readonly IUsuarioRepository _usuarioRepository;
         private readonly IManagerResult _managerResult;
@@ -42,6 +43,17 @@ namespace CrudTesteTecnico2019.Application.Usuario.Handler
                 _usuarioRepository.Editar(usuario);
                 _usuarioRepository.SaveChanges();
                 return _managerResult.Success("Usuario atualizado com sucesso.");
+            });
+        }
+
+        public async Task<CommandResult> Handle(UsuarioDeleteCommand request, CancellationToken cancellationToken)
+        {
+            return await Task.Run(() =>
+            {
+                UsuarioEntity usuario = UsuarioFactory.Create(request);
+                _usuarioRepository.Remover(usuario);
+                _usuarioRepository.SaveChanges();
+                return _managerResult.Success("Usuario removido com sucesso.");
             });
         }
     }
