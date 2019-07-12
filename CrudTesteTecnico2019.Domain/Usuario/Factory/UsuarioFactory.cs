@@ -9,12 +9,20 @@ namespace CrudTesteTecnico2019.Domain.Usuario.Factory
     {
         public static UsuarioEntity Create(UsuarioBaseCommand command)
         {
-            return new UsuarioEntity(command.Id,
-                                     command.Nome,
-                                     command.Sobrenome,
-                                     new Email(command.Email),
-                                     new DataNascimento(command.DataNascimento),
-                                     (Perfil)command.Perfil);
+            return new UsuarioEntity
+            (
+                command.Id,
+                command.Nome,
+                command.Sobrenome,
+                new Email(command.Email),
+                new DataNascimento(command.DataNascimento),
+                (Perfil)command.Perfil
+            );
+        }
+
+        public static UsuarioEntity Create(ExcluirUsuarioCommand command)
+        {
+            return new UsuarioEntity(command.Id);
         }
     }
 }

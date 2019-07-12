@@ -5,7 +5,9 @@ namespace CrudTesteTecnico2019.Database.Database
 {
     public sealed class Context : DbContext
     {
-        public Context(DbContextOptions options) : base(options) { }
+        public Context(DbContextOptions options) : base(options)
+        {
+        }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

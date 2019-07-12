@@ -14,35 +14,38 @@ namespace CrudTesteTecnico2019.Web.Controllers
     public class UsuarioController : ControllerBase
     {
         private readonly IMediator _mediator;
+
         public UsuarioController(IMediator mediator)
         {
             _mediator = mediator;
         }
 
-        [HttpPost]
-        public async Task<CommandResult> Adicionar([FromBody] UsuarioInsertCommand command)
-        {
-            return await _mediator.Send(command);
-        }
-
         [HttpPut("{id}")]
-        public async Task<CommandResult> Editar([FromRoute] long id, [FromBody] UsuarioEditCommand command)
+        public async Task<CommandResult> Atualizar([FromRoute] long id, [FromBody] AtualizarUsuarioCommand command)
         {
             command.Id = id;
+
             return await _mediator.Send(command);
         }
 
         [HttpDelete("{id}")]
-        public async Task<CommandResult> Remover([FromRoute] long id, [FromBody] UsuarioDeleteCommand command)
+        public async Task<CommandResult> Excluir([FromRoute] long id)
         {
-            command.Id = id;
+            var command = new ExcluirUsuarioCommand { Id = id };
+
+            return await _mediator.Send(command);
+        }
+
+        [HttpPost]
+        public async Task<CommandResult> Inserir([FromBody] InserirUsuarioCommand command)
+        {
             return await _mediator.Send(command);
         }
 
         [HttpGet]
         public async Task<IEnumerable<UsuarioModel>> Listar()
         {
-            return await _mediator.Send(new UsuarioQuery());
+            return await _mediator.Send(new ListarUsuarioQuery());
         }
     }
 }

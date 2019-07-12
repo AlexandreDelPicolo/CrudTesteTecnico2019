@@ -6,10 +6,15 @@ namespace CrudTesteTecnico2019.Database.Database.Usuario
 {
     public interface IUsuarioRepository
     {
-        void Adicionar(UsuarioEntity usuario);
-        void Editar(UsuarioEntity usuario);
-        void Remover(UsuarioEntity usuario);
+        void Atualizar(UsuarioEntity usuario);
+
+        void Excluir(UsuarioEntity usuario);
+
+        void Inserir(UsuarioEntity usuario);
+
         IEnumerable<UsuarioModel> Listar();
+
+        /// TODO: Remover esse método e utilizar um Unit of Work
         int SaveChanges();
     }
 }

@@ -12,9 +12,9 @@ namespace CrudTesteTecnico2019.Domain.Usuario.ObjectValue
 
         public string Value { get; }
 
-        public bool Valido()
+        public bool Validar()
         {
-            return EmailHelper.ValidarFormato(Value);
+            return EmailHelper.Validar(Value);
         }
     }
 }

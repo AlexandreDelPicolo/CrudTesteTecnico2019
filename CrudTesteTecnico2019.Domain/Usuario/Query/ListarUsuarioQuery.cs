@@ -4,5 +4,5 @@ using System.Collections.Generic;
 
 namespace CrudTesteTecnico2019.Domain.Usuario.Query
 {
-    public class UsuarioQuery : IRequest<IEnumerable<UsuarioModel>> { }
+    public class ListarUsuarioQuery : IRequest<IEnumerable<UsuarioModel>> { }
 }

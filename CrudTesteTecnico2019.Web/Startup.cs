@@ -10,7 +10,6 @@ using FluentValidation.AspNetCore;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -26,48 +25,6 @@ namespace CrudTesteTecnico2019.Web
 
         public IConfiguration _configuration { get; }
 
-        public void ConfigureServices(IServiceCollection services)
-        {
-            ConfigurarBanco(services);
-            InjetarDependencias(services);
-            InjetarValidacoes(services);
-        }
-
-        private void ConfigurarBanco(IServiceCollection services)
-        {
-            services.AddDbContextPool<Context>(options => options.UseSqlServer(obterConnectionString()));
-            services.BuildServiceProvider().GetRequiredService<Context>().Database.Migrate();
-        }
-
-        private string obterConnectionString()
-        {
-            return _configuration["ConnectionString"];
-        }
-
-        private void InjetarDependencias(IServiceCollection services)
-        {
-            services.AddScoped<IUsuarioRepository, UsuarioRepository>();
-            services.AddScoped<IManagerResult, ManagerResult>();
-
-            services.AddMvc()
-                .SetCompatibilityVersion(CompatibilityVersion.Version_2_2)
-                .AddFluentValidation();
-
-            services.AddMediatR
-            (
-                typeof(Startup),
-                typeof(UsuarioCommandHandler)
-            );
-        }
-
-        private void InjetarValidacoes(IServiceCollection services)
-        {
-            services.AddTransient<IValidator<UsuarioBaseCommand>, UsuarioBaseCommandValidator>();
-            services.AddTransient<IValidator<UsuarioInsertCommand>, UsuarioInsertCommandValidator>();
-            services.AddTransient<IValidator<UsuarioEditCommand>, UsuarioEditCommandValidator>();
-            services.AddTransient<IValidator<UsuarioDeleteCommand>, UsuarioDeleteCommandValidator>();
-        }
-
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             if (env.IsDevelopment())
@@ -81,6 +38,37 @@ namespace CrudTesteTecnico2019.Web
 
             app.UseHttpsRedirection();
             app.UseMvc();
+        }
+
+        public void ConfigureServices(IServiceCollection services)
+        {
+            AdicionarBancoDados(services);
+            AdicionarDependencias(services);
+            AdicionarValidators(services);
+        }
+
+        private void AdicionarBancoDados(IServiceCollection services)
+        {
+            services.AddDbContextPool<Context>(options => options.UseSqlServer(_configuration["ConnectionString"]));
+            services.BuildServiceProvider().GetRequiredService<Context>().Database.Migrate();
+        }
+
+        private void AdicionarDependencias(IServiceCollection services)
+        {
+            services.AddScoped<IUsuarioRepository, UsuarioRepository>();
+            services.AddScoped<IManagerResult, ManagerResult>();
+
+            services.AddMvc().AddFluentValidation();
+
+            services.AddMediatR(typeof(Startup), typeof(UsuarioCommandHandler));
+        }
+
+        private void AdicionarValidators(IServiceCollection services)
+        {
+            services.AddTransient<IValidator<UsuarioBaseCommand>, UsuarioBaseCommandValidator>();
+            services.AddTransient<IValidator<InserirUsuarioCommand>, InserirUsuarioCommandValidator>();
+            services.AddTransient<IValidator<AtualizarUsuarioCommand>, AtualizarUsuarioCommandValidator>();
+            services.AddTransient<IValidator<ExcluirUsuarioCommand>, ExcluirUsuarioCommandValidator>();
         }
     }
 }

@@ -11,9 +11,9 @@ namespace CrudTesteTecnico2019.Domain.Usuario.ObjectValue
 
         public DateTime Value { get; }
 
-        public bool Valido()
+        public bool Validar()
         {
-            return Value < DateTime.Now;
+            return Value <= DateTime.Now;
         }
     }
 }
