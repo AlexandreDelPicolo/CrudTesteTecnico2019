@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace CrudTesteTecnico2019.Web.Controllers
 {
-    [Route("api/usuario")]
+    [Route("v1/usuario")]
     [ApiController]
     public class UsuarioController : ControllerBase
     {
